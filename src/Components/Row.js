@@ -8,9 +8,13 @@ const Row = (props) => {
   useEffect(() => {
     async function fetchData() {
       const request = await axios.get(props.fetchUrl);
+      setMovies(request.data.results);
+      return request;
     }
     fetchData();
-  }, []);
+  }, [props.fetchUrl]);
+
+  console.log(movies);
 
   return (
     <div className="">
