@@ -25,3 +25,4 @@ yarn-error.log*
 
 # Hide the API KEY from TMDB
 /apiKey
+/src/apiKey/
