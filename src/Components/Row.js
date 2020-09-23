@@ -17,7 +17,7 @@ const Row = (props) => {
     fetchData();
   }, [props.fetchUrl]);
 
-  //console.log(movies);
+  console.log(movies);
 
   return (
     <div className="row">
@@ -26,8 +26,10 @@ const Row = (props) => {
         {movies.map((movie) => (
           <img
             key={movie.id} /* for react to optimise rendering */
-            className="row__poster"
-            src={`${base_url}${movie.poster_path}`}
+            className={`row__poster ${props.isLargeRow && "row__posterLarge"}`}
+            src={`${base_url}${
+              props.isLargeRow ? movie.poster_path : movie.backdrop_path
+            }`}
             alt={movie.name}
           />
         ))}
