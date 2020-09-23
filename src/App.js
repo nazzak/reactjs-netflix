@@ -4,7 +4,8 @@ import "./App.css";
 function App() {
   return (
     <div className="app">
-      <h1>Hey</h1>
+      <Row title="NETFLIX ORIGINALS" />
+      <Row title="Trending Now" />
     </div>
   );
 }
