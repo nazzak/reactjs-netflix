@@ -1,0 +1,41 @@
+.row {
+  margin-left: 20px;
+}
+
+.row__posters {
+  display: flex;
+
+  /* list scroll */
+  overflow-y: hidden;
+  overflow-x: scroll;
+  /* remove crop of image when hover it */
+  padding: 20px;
+}
+
+.row__posters::-webkit-scrollbar {
+  display: none;
+}
+
+.row__poster {
+  object-fit: contain; /* keep the aspect ratio */
+  width: 100%;
+  max-height: 100px;
+
+  /* change size transition */
+  transition: transform 450ms;
+
+  margin-right: 10px;
+}
+
+.row__poster:hover {
+  /* look transition above */
+  transform: scale(1.08);
+}
+
+.row__posterLarge {
+  max-height: 250px;
+}
+
+.row__posterLarge:hover {
+  transform: scale(1.09);
+}
