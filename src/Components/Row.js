@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "../utils/axios";
 
+const base_url = "https://image.tmdb.org/t/p/original/";
+
 const Row = (props) => {
   const [movies, setMovies] = useState([]);
 
@@ -17,8 +19,13 @@ const Row = (props) => {
   console.log(movies);
 
   return (
-    <div className="">
+    <div className="rom">
       <h2>{props.title}</h2>
+      <div className="row__posters">
+        {movies.map((movie) => (
+          <img src={`${base_url}${movie.poster_path}`} alt={movie.name} />
+        ))}
+      </div>
     </div>
   );
 };
