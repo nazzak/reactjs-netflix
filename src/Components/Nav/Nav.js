@@ -9,11 +9,7 @@ const Nav = () => {
         src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg"
         alt="Netflix Logo"
       />
-      <img
-        className="nav__avatar"
-        src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg"
-        alt="Netflix Logo"
-      />
+      <img className="nav__avatar" src="logo512.png" alt="Netflix Logo" />
     </div>
   );
 };
