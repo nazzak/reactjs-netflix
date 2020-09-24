@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import YouTube from "react-youtube";
 import axios from "../../utils/axios";
 import "./Row.css";
 
@@ -19,6 +20,15 @@ const Row = (props) => {
 
   //console.log(movies);
 
+  const youtubeOpts = {
+    height: "390",
+    width: "100%",
+    playerVars: {
+      // https://....
+      autoplay: 1,
+    },
+  };
+
   return (
     <div className="row">
       <h2>{props.title}</h2>
@@ -34,6 +44,7 @@ const Row = (props) => {
           />
         ))}
       </div>
+      <YouTube videoId="wvfUhQA9M2g" opts={youtubeOpts} />
     </div>
   );
 };
