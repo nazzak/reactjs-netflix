@@ -32,10 +32,12 @@ const Banner = () => {
       }}
     >
       <div className="banner__contents">
-        <h1>title</h1>
-        <button></button>
-        <button></button>
+        <h1>{movie?.title || movie?.name || movie?.original_name}</h1>
+        <button className="banner__button">Play</button>
+        <button className="banner__button">My List</button>
       </div>
+
+      <h1 class="banner__description">{movie?.overview}</h1>
     </header>
   );
 };
